@@ -1,0 +1,350 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>文件操作 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="test.html" />
+    
+    
+    <link rel="prev" href="单例模式.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="可变类型与不可变类型.html">
+            
+                <a href="可变类型与不可变类型.html">
+            
+                    
+                    可变类型与不可变类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="单例模式.html">
+            
+                <a href="单例模式.html">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="文件操作.html">
+            
+                <a href="文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="test.html">
+            
+                <a href="test.html">
+            
+                    
+                    目录2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >文件操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6587;&#x4EF6;&#x64CD;&#x4F5C;">&#x6587;&#x4EF6;&#x64CD;&#x4F5C;</h1>
+<p>&#x6587;&#x4EF6;&#x662F;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;&#x5B58;&#x50A8;&#x7684;&#x8868;&#x73B0;&#x5F62;&#x5F0F;</p>
+<p>&#x8BFB;&#x5199;&#x6587;&#x4EF6;&#x7684;&#x6807;&#x51C6;&#x683C;&#x5F0F;&#x4E00;&#xFF1A;</p>
+<p>1.&#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF1A;<code>file = open(&quot;&#x6587;&#x4EF6;&#x540D;&quot;,&quot;&#x8BFB;&#x5199;&#x6A21;&#x5F0F;&quot;)</code>    </p>
+<p>2.&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#xFF1A;<code>f = file.read()</code></p>
+<p>3.&#x5173;&#x95ED;&#x6587;&#x4EF6;&#xFF1A;<code>file.close()</code></p>
+<p>&#x6587;&#x4EF6;&#x8BFB;&#x5199;&#x6A21;&#x5F0F;&#x4E8C;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">with</span> open(<span class="hljs-string">&quot;&#x6587;&#x4EF6;&#x540D;&quot;</span>,<span class="hljs-string">&quot;&#x8BFB;&#x5199;&#x6A21;&#x5F0F;&quot;</span>)<span class="hljs-keyword">as</span> f:
+    f.write(<span class="hljs-string">&quot;&#x5185;&#x5BB9;&quot;</span>)
+</code></pre>
+<p><strong>&#x8BE5;&#x6A21;&#x5F0F;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x6587;&#x4EF6;</strong></p>
+<h4 id="&#x5728;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x901A;&#x5E38;&#x5148;&#x7F16;&#x5199;&#x6253;&#x5F00;&#x548C;&#x5173;&#x95ED;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5728;&#x7F16;&#x5199;&#x4E2D;&#x95F4;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;">&#x5728;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x901A;&#x5E38;&#x5148;&#x7F16;&#x5199;<code>&#x6253;&#x5F00;</code>&#x548C;<code>&#x5173;&#x95ED;</code>&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5728;&#x7F16;&#x5199;&#x4E2D;&#x95F4;<code>&#x8BFB;&#x5199;</code>&#x64CD;&#x4F5C;</h4>
+<h3 id="&#x6587;&#x4EF6;&#x8BFB;&#x5199;&#x6A21;&#x5F0F;">&#x6587;&#x4EF6;&#x8BFB;&#x5199;&#x6A21;&#x5F0F;</h3>
+<p>r &#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;
+w&#x5199;&#x5165;&#x5185;&#x5BB9;
+a &#x8FFD;&#x52A0;&#x5199;&#x5165;</p>
+<p>&#x4F8B;&#x5982;r+&#xFF0C;w+,wb+&#x7B49;&#x7B49;&#x5E26;&#x52A0;&#x53F7;&#x7684;&#x90FD;&#x662F;&#x53EF;&#x8BFB;&#x53EF;&#x5199;&#x7C7B;&#x578B;</p>
+<p>&#x4F7F;&#x7528;r,rb,r+&#xFF0C;rb+&#x7B49;&#x8BFB;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x5019;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x800C;&#x5199;&#x64CD;&#x4F5C;&#x5728;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x65F6;&#x5019;&#x56DE;&#x521B;&#x5EFA;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;</p>
+<p><strong>&#x64CD;&#x4F5C;&#x7EAF;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x578B;</strong>
+&#x5176;&#x4E2D;r,w,a&#x4E3A;&#x5B57;&#x7B26;&#x578B;
+<strong>&#x64CD;&#x4F5C;&#x975E;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;&#x5B57;&#x8282;&#x578B;</strong>
+rb,wb,ab&#x4E3A;&#x5B57;&#x8282;&#x578B;</p>
+<h2 id="&#x6587;&#x4EF6;&#x8BFB;&#x64CD;&#x4F5C;">&#x6587;&#x4EF6;&#x8BFB;&#x64CD;&#x4F5C;</h2>
+<p>&#x5B57;&#x8282;&#x578B;&#x4E3B;&#x8981;&#x7528;&#xFF1A;<code>read(&#x6570;&#x5B57;)</code></p>
+<p>&#x5B57;&#x7B26;&#x578B;&#x4E3B;&#x8981;&#x7528; :<code>read&#xFF08;&#x6570;&#x5B57;&#xFF09;</code>&#x548C;<code>readline()</code></p>
+<pre><code class="lang-python">file = open(&quot;123.txt,&quot;r+&quot;)
+flie.write(&quot;hello&quot;)
+r = flie.read()
+print(r)
+file.close()
+</code></pre>
+<p>&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x4E3A;&#x7A7A;<code> </code>
+&#x56E0;&#x4E3A;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x5148;&#x5199;&#x5165;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#xFF0C;&#x6B64;&#x65F6;&#x5149;&#x6807;&#x5728;&#x5199;&#x5165;&#x5185;&#x5BB9;&#x7684;&#x540E;&#x9762;&#xFF0C;&#x5728;&#x4ECE;&#x8FD9;&#x4E2A;&#x4F4D;&#x7F6E;&#x5F80;&#x540E;&#x8BFB;&#x53D6;&#x5185;&#x5BB9;&#xFF0C;&#x7ED3;&#x679C;&#x4E3A;&#x7A7A;</p>
+<p>&#x6309;&#x6307;&#x5B9A;&#x5B57;&#x8282;&#x6570;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-python">file = open(<span class="hljs-string">&quot;zxc.txt&quot;</span>,<span class="hljs-string">&quot;rb&quot;</span>)
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+    info = file.read(<span class="hljs-number">1024</span>) 
+    <span class="hljs-comment"># &#x6B64;&#x5904;&#x8BBE;&#x7F6E;&#x4E3A;1024&#x5B57;&#x8282;&#xFF0C;&#x4E3A;1KB,&#x6BCF;&#x6B21;&#x8BFB;&#x53D6;1KB&#x5E76;&#x8F93;&#x51FA;&#xFF0C;&#x5728;&#x8BFB;&#x53D6;&#x8F83;&#x5927;&#x6587;&#x4EF6;&#x65F6;&#x53EF;&#x4EE5;&#x8282;&#x7701;&#x5185;&#x5B58;</span>
+    <span class="hljs-keyword">if</span> len&#xFF08;info&#xFF09; == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">else</span>:
+        print(info)
+flie.close()
+</code></pre>
+<h2 id="&#x6587;&#x4EF6;&#x5199;&#x64CD;&#x4F5C;">&#x6587;&#x4EF6;&#x5199;&#x64CD;&#x4F5C;</h2>
+<p>&#x7EAF;&#x6587;&#x672C;&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x6A21;&#x5F0F;
+<code>w</code> &#x548C;<code>a</code>
+&#x4F7F;&#x7528;<code>w</code>&#x6B64;&#x6A21;&#x5F0F;&#x4F1A;&#x8986;&#x76D6;&#x539F;&#x59CB;&#x6587;&#x4EF6;</p>
+<p>&#x975E;&#x6587;&#x672C;&#x4F7F;&#x7528;&#x5B57;&#x8282;&#x6A21;&#x5F0F;
+<code>wb</code>&#x548C;<code>ab</code></p>
+<p><strong>&#x901A;&#x7528;&#x6027;&#xFF1A;</strong>
+&#x5B57;&#x8282; &gt; &#x5B57;&#x7B26;</p>
+<p>&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#xFF1A;</p>
+<pre><code class="lang-python">f = open(<span class="hljs-string">&quot;aaa.txt&quot;</span>,<span class="hljs-string">&quot;w&quot;</span>)
+f.write(<span class="hljs-string">&quot;123&quot;</span>)
+f.write(<span class="hljs-string">&quot;456&quot;</span>)
+f.close()
+</code></pre>
+<p>&#x7ED3;&#x679C;&#x6587;&#x4EF6;&#x4E2D;&#x6709;<code>123456</code>&#x56E0;&#x4E3A;<code>w</code>&#x7684;&#x8986;&#x76D6;&#x5199;&#x65B9;&#x5F0F;&#x53EA;&#x4F1A;&#x8986;&#x76D6;&#x4E0A;&#x4E00;&#x6B21;&#x6253;&#x5F00;&#x6B64;&#x6587;&#x4EF6;&#x5199;&#x5165;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x5728;&#x4E00;&#x6B21;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x4E2D;&#x5199;&#x5165;&#x82E5;&#x5E72;&#x884C;&#x5E76;&#x4E0D;&#x4F1A;&#x76F8;&#x4E92;&#x8986;&#x76D6;&#x3002;</p>
+<p><strong>&#x7279;&#x6B8A;&#x65B9;&#x6CD5;</strong>
+<code>file.seel(0)</code>&#x8BBE;&#x7F6E;&#x5149;&#x6807;&#x4E3A;&#x503C;&#x65B9;&#x6CD5;&#xFF0C;&#x4F20;&#x5165;&#x53C2;&#x6570;<code>0</code>,&#x5219;&#x5149;&#x6807;&#x79FB;&#x52A8;&#x5230;&#x7D22;&#x5F15;&#x4E3A;0 &#x7684;&#x4F4D;&#x7F6E;</p>
+<h2 id="os&#x6A21;&#x5757;&#x76F8;&#x5173;&#x64CD;&#x4F5C;">OS&#x6A21;&#x5757;&#x76F8;&#x5173;&#x64CD;&#x4F5C;</h2>
+<p><code>mkdir()</code>&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;&#x65B9;&#x6CD5;</p>
+<p><code>rmdir()</code>&#x5220;&#x9664;&#x6587;&#x4EF6;&#x5939;&#x65B9;&#x6CD5;</p>
+<p><code>rename(&quot;&#x4E45;&#x540D;&#x5B57;&quot;, &quot;&#x65B0;&#x540D;&#x5B57;&quot;)</code>&#x91CD;&#x547D;&#x540D;&#x6587;&#x4EF6;,&#x5728;&#x6587;&#x4EF6;&#x540D;&#x524D;&#x9762;&#x52A0;&#x4E0A;&#x8DEF;&#x5F84;&#x8FD8;&#x53EF;&#x4EE5;&#x79FB;&#x52A8;&#x6587;&#x4EF6;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="单例模式.html" class="navigation navigation-prev " aria-label="Previous page: 单例模式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="test.html" class="navigation navigation-next " aria-label="Next page: 目录2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"文件操作","level":"1.4","depth":1,"next":{"title":"目录2","level":"1.5","depth":1,"path":"test.md","ref":"test.md","articles":[]},"previous":{"title":"单例模式","level":"1.3","depth":1,"path":"单例模式.md","ref":"单例模式.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"文件操作.md","mtime":"2019-03-08T09:21:52.256Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-08T09:26:03.734Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
